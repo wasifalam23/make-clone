@@ -1,4 +1,6 @@
 <script setup>
+	import vid from '@/assets/make-vid.webm';
+
 	const texts = ref([
 		'Bring ideas to life',
 		'Connect apps',
@@ -85,7 +87,7 @@
 						class="py-2 px-3 border text-sm font-semibold rounded-md border-[#ee2fee] text-[#ee2fee]">
 						Log in
 					</button>
-					<button class="btn-cta px-3 rounded-md text-sm font-semibold">
+					<button class="btn-cta px-3 py-2 rounded-md text-sm font-semibold">
 						Get started free
 					</button>
 				</div>
@@ -96,7 +98,41 @@
 					id="typing-text"
 					class="text-7xl text-gray-50 font-semibold text-nowrap"
 					:class="{ fadeOut: fadingOut, fadeIn: fadingIn }">
-					{{ currentText }}
+					<span>
+						{{ currentText }}
+						<br />
+					</span>
+				</div>
+			</div>
+			<div class="flex items-center flex-col">
+				<h1 class="text-[#f0f] text-7xl font-semibold mt-4">#withMake</h1>
+				<div class="max-w-[44rem] text-center mt-8">
+					<p class="text-gray-50 text-lg font-light">
+						From tasks and workflows to apps and systems, build and automate
+						anything in one powerful visual platform.
+					</p>
+				</div>
+
+				<button
+					class="btn-cta px-20 py-4 rounded-md text-sm font-semibold mt-12 text-gray-50">
+					Get started free
+				</button>
+
+				<div class="flex items-center gap-6 mt-6 text-gray-50">
+					<div class="flex items-center">
+						<UIcon name="i-heroicons-check" class="mt-.5" />
+						<p>No credit card required</p>
+					</div>
+					<div class="flex items-center">
+						<UIcon name="i-heroicons-check" class="mt-.5" />
+						<p>No time limit on free plan</p>
+					</div>
+				</div>
+
+				<div class="max-w-6xl">
+					<video class="w-full h-full" autoplay loop muted>
+						<source :src="vid" type="video/webm" />
+					</video>
 				</div>
 			</div>
 		</section>
