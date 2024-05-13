@@ -1,0 +1,73 @@
+<template>
+	<div>
+		<div id="typing-text" :class="{ fadeIn: fadingIn }">
+			{{ currentText }}
+		</div>
+	</div>
+</template>
+
+<script setup>
+	import { ref, onMounted, onUnmounted } from 'vue';
+
+	const texts = ref([
+		'Bring ideas to life',
+		'Connect apps',
+		'Design workflows',
+		'Align teams',
+		'Build systems',
+	]);
+	const currentIndex = ref(0);
+	const currentText = ref('');
+	let typingTimeout;
+	const fadingIn = ref(false);
+
+	const type = () => {
+		const text = texts.value[currentIndex.value];
+		const interval = 80; // Adjust typing speed here (milliseconds)
+		let index = 0;
+
+		fadingIn.value = true;
+		currentText.value = ''; // Reset current text
+
+		typingTimeout = setTimeout(() => {
+			const typingInterval = setInterval(() => {
+				currentText.value = text.slice(0, index);
+				index++;
+
+				if (index > text.length) {
+					clearInterval(typingInterval);
+					setTimeout(() => {
+						fadingIn.value = false;
+						currentIndex.value = (currentIndex.value + 1) % texts.value.length;
+						type();
+					}, 1000); // Adjust delay between texts here (milliseconds)
+				}
+			}, interval);
+		}, 500); // Adjust initial delay before typing the first text here (milliseconds)
+	};
+
+	onMounted(() => {
+		type();
+	});
+
+	// Clear typingTimeout on component unmount
+	onUnmounted(() => {
+		clearTimeout(typingTimeout);
+	});
+</script>
+
+<style scoped>
+	#typing-text {
+		font-family: Arial, sans-serif;
+		font-size: 24px;
+		border-right: 2px solid black;
+		white-space: nowrap;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	.fadeIn {
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out;
+	}
+</style>
