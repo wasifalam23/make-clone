@@ -5,8 +5,9 @@
 	import spotify from '@/assets/Spotify.webp';
 	import personio from '@/assets/Personio.webp';
 	import meta from '@/assets/Meta.webp';
-
 	import play from '@/assets/play.webp';
+	import webinar from '@/assets/image__20_.webp';
+	import template from '@/assets/image__23_.webp';
 </script>
 
 <template>
@@ -31,7 +32,7 @@
 		</section>
 
 		<section
-			class="relative bg-[#f5f0f0] flex flex-col items-center pt-16 pb-20">
+			class="relative bg-primary-100 flex flex-col items-center pt-16 pb-20">
 			<h2 class="text-gray-800 font-semibold text-5xl">
 				More than no-code workflow automation
 			</h2>
@@ -58,5 +59,53 @@
 		</section>
 
 		<Features />
+
+		<section class="relative bg-primary-100 pt-16 pb-20">
+			<div
+				class="grid grid-cols-[55fr_45fr] gap-x-14 items-center max-w-[75rem] mx-auto">
+				<div>
+					<img :src="webinar" alt="webinar" />
+				</div>
+
+				<div class="flex flex-col gap-6">
+					<h2 class="text-5xl font-bold">
+						Automate your work. Build something new.
+					</h2>
+					<p class="text-lg font-light pr-8">
+						Just drag and drop apps to automate existing workflows or build new
+						complex processes. Solve problems across all areas and teams.
+					</p>
+
+					<button
+						class="uppercase text-primary-500 flex items-end gap-1 font-medium">
+						<span>get started</span>
+						<UIcon name="i-heroicons-arrow-long-right" class="text-xs" />
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="relative bg-white pt-16 pb-24">
+			<div
+				class="grid grid-cols-[45fr_55fr] gap-x-14 items-center max-w-[75rem] mx-auto">
+				<div class="flex flex-col gap-6">
+					<h2 class="text-5xl font-bold">Start with a template</h2>
+					<p class="text-lg font-light pr-8 w-[95%]">
+						Get inspired by thousands of free workflow automation templates.
+						Customize them to match your ideal workflows.
+					</p>
+
+					<button
+						class="uppercase text-primary-500 flex items-end gap-1 font-medium">
+						<span>choose a template</span>
+						<UIcon name="i-heroicons-arrow-long-right" class="text-xs" />
+					</button>
+				</div>
+
+				<div>
+					<img :src="template" alt="webinar" />
+				</div>
+			</div>
+		</section>
 	</main>
 </template>

@@ -47,7 +47,7 @@
 	<section
 		ref="scrollSection"
 		:class="{ 'scroll-up-animation': showScrollUpAnimation }"
-		class="scroll-up-section relative bg-[#240342] flex flex-col items-center pt-24 pb-16 transition-opacity duration-500">
+		class="scroll-up-section relative bg-primary-800 flex flex-col items-center pt-24 pb-16 transition-opacity duration-500">
 		<div class="w-[70%] mx-auto px-16">
 			<h2 class="text-gray-50 font-semibold text-5xl">
 				One platform. Unlimited possibilities for all.
@@ -64,7 +64,7 @@
 			<div
 				class="grid grid-cols-[18rem_18rem_18rem_18rem_18rem] pb-8 px-16 mt-12 gap-x-6 overflow-x-scroll"
 				ref="scrollContainer">
-				<div class="bg-[#3a1d55] rounded-md px-6 py-6">
+				<div class="bg-primary-700 rounded-md px-6 py-6">
 					<img :src="marketing" alt="bulb-logo" />
 					<h4 class="text-gray-50 font-light text-lg mt-5">Marketing</h4>
 					<p class="text-gray-300 font-light mt-2">
@@ -72,7 +72,7 @@
 						effective lead generation.
 					</p>
 				</div>
-				<div class="bg-[#3a1d55] rounded-md px-6 py-6">
+				<div class="bg-primary-700 rounded-md px-6 py-6">
 					<img :src="sales" alt="bulb-logo" />
 					<h4 class="text-gray-50 font-light text-lg mt-5">Sales</h4>
 					<p class="text-gray-300 font-light mt-2">
@@ -80,7 +80,7 @@
 						management.
 					</p>
 				</div>
-				<div class="bg-[#3a1d55] rounded-md px-6 py-6">
+				<div class="bg-primary-700 rounded-md px-6 py-6">
 					<img :src="operations" alt="bulb-logo" />
 					<h4 class="text-gray-50 font-light text-lg mt-5">Operations</h4>
 					<p class="text-gray-300 font-light mt-2">
@@ -88,7 +88,7 @@
 						the loss of company data.
 					</p>
 				</div>
-				<div class="bg-[#3a1d55] rounded-md px-6 py-6">
+				<div class="bg-primary-700 rounded-md px-6 py-6">
 					<img :src="it" alt="bulb-logo" />
 					<h4 class="text-gray-50 font-light text-lg mt-5">IT</h4>
 					<p class="text-gray-300 font-light mt-2">
@@ -96,7 +96,7 @@
 						incidents immediately.
 					</p>
 				</div>
-				<div class="bg-[#3a1d55] rounded-md px-6 py-6">
+				<div class="bg-primary-700 rounded-md px-6 py-6">
 					<img :src="hr" alt="bulb-logo" />
 					<h4 class="text-gray-50 font-light text-lg mt-5">HR</h4>
 					<p class="text-gray-300 font-light mt-2">

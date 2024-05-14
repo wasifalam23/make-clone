@@ -84,10 +84,11 @@
 				</nav>
 				<div class="flex gap-6">
 					<button
-						class="py-2 px-3 border text-sm font-semibold rounded-md border-[#ee2fee] text-[#ee2fee]">
+						class="py-2 px-3 border text-sm font-semibold rounded-md border-primary-500 text-primary-500">
 						Log in
 					</button>
-					<button class="btn-cta px-3 py-2 rounded-md text-sm font-semibold">
+					<button
+						class="btn-cta px-3 py-2 text-gray-50 rounded-md text-sm font-semibold">
 						Get started free
 					</button>
 				</div>
@@ -105,7 +106,7 @@
 				</div>
 			</div>
 			<div class="flex items-center flex-col">
-				<h1 class="text-[#f0f] text-7xl font-semibold mt-4">#withMake</h1>
+				<h1 class="text-primary-600 text-7xl font-semibold mt-4">#withMake</h1>
 				<div class="max-w-[44rem] text-center mt-8">
 					<p class="text-gray-50 text-lg font-light">
 						From tasks and workflows to apps and systems, build and automate
