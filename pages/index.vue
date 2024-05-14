@@ -56,5 +56,7 @@
 				</div>
 			</div>
 		</section>
+
+		<Features />
 	</main>
 </template>
