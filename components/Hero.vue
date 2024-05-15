@@ -1,6 +1,8 @@
 <script setup>
 	import vid from '@/assets/make-vid.webm';
 
+	const isMenuOpen = ref(false);
+
 	const isScrolled = ref(false);
 
 	const handleScroll = () => {
@@ -66,13 +68,31 @@
 		clearTimeout(typingTimeout);
 		window.removeEventListener('scroll', handleScroll);
 	});
+
+	// Prevent scrolling of body content when mobile menu is open
+	const disableBodyScroll = () => {
+		document.body.style.overflow = 'hidden';
+	};
+
+	const enableBodyScroll = () => {
+		document.body.style.overflow = '';
+	};
+
+	// Watch for changes in the mobile menu state and enable/disable body scrolling accordingly
+	watch(isMenuOpen, (newValue) => {
+		if (newValue) {
+			disableBodyScroll();
+		} else {
+			enableBodyScroll();
+		}
+	});
 </script>
 
 <template>
 	<div class="pb-24">
 		<div class="hero-bg"></div>
 
-		<section class="relative z-[1]">
+		<section class="relative z-[10]">
 			<CommentBox class="absolute left-32 top-20" :inverse="true"
 				>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
 				sunt?</CommentBox
@@ -94,13 +114,89 @@
 
 			<header
 				class="fixed w-full top-0 flex justify-between items-center text-gray-50 h-20 px-6"
-				:class="{
-					'bg-white text-gray-700 transition-all duration-500 ease-linear':
-						isScrolled,
-				}">
+				:class="[
+					{
+						'bg-white text-gray-700 transition-all duration-500 ease-linear':
+							isScrolled,
+					},
+					{ 'bg-white text-gray-700': isMenuOpen },
+				]">
 				<div>Logo</div>
-				<nav class="ml-32">
-					<ul class="flex gap-12">
+				<button
+					@click="isMenuOpen = !isMenuOpen"
+					class="bg-primary-800 text-gray-50 w-14 h-14 rounded-full items-center justify-center hidden max-lg:flex">
+					<UIcon name="i-heroicons-squares-plus-solid" class="text-xl" />
+				</button>
+
+				<nav
+					v-show="isMenuOpen"
+					class="fixed top-20 hidden max-lg:block inset-0 w-full h-full bg-white overflow-y-scroll text-gray-800 pt-14 px-6 pb-14">
+					<div class="">
+						<ul class="flex flex-col gap-6">
+							<li class="flex flex-col gap-4 border-b pb-6 border-b-gray-400">
+								<div class="font-thin uppercase text-sm">Product</div>
+								<ul class="flex flex-col gap-2">
+									<li class="flex items-center gap-5">
+										<UIcon name="i-heroicons-bolt" class="text-2xl" />
+										<span class="text-lg font-light">Platform</span>
+									</li>
+									<li class="flex items-center gap-5">
+										<UIcon name="i-heroicons-plus-circle" class="text-2xl" />
+										<span class="text-lg font-light">Apps & services</span>
+									</li>
+									<li class="flex items-center gap-5">
+										<UIcon
+											name="i-heroicons-globe-europe-africa"
+											class="text-2xl" />
+										<span class="text-lg font-light">EnterPrise</span>
+									</li>
+								</ul>
+							</li>
+
+							<li class="flex flex-col gap-4 border-b pb-6 border-b-gray-400">
+								<div class="font-thin uppercase text-sm">solutions</div>
+								<ul class="flex flex-col gap-2">
+									<li class="flex items-center gap-5">
+										<UIcon name="i-heroicons-bolt" class="text-2xl" />
+										<span class="text-lg font-light">Platform</span>
+									</li>
+									<li class="flex items-center gap-5">
+										<UIcon name="i-heroicons-plus-circle" class="text-2xl" />
+										<span class="text-lg font-light">Apps & services</span>
+									</li>
+									<li class="flex items-center gap-5">
+										<UIcon
+											name="i-heroicons-globe-europe-africa"
+											class="text-2xl" />
+										<span class="text-lg font-light">EnterPrise</span>
+									</li>
+								</ul>
+							</li>
+							<li class="flex flex-col gap-4 border-b pb-6 border-b-gray-400">
+								<div class="font-thin uppercase text-sm">solutions</div>
+								<ul class="flex flex-col gap-2">
+									<li class="flex items-center gap-5">
+										<UIcon name="i-heroicons-bolt" class="text-2xl" />
+										<span class="text-lg font-light">Platform</span>
+									</li>
+									<li class="flex items-center gap-5">
+										<UIcon name="i-heroicons-plus-circle" class="text-2xl" />
+										<span class="text-lg font-light">Apps & services</span>
+									</li>
+									<li class="flex items-center gap-5">
+										<UIcon
+											name="i-heroicons-globe-europe-africa"
+											class="text-2xl" />
+										<span class="text-lg font-light">EnterPrise</span>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+
+				<nav class="ml-32 max-lg:hidden">
+					<ul class="flex gap-12 max-xl:gap-8">
 						<li class="flex items-center gap-1 text-sm cursor-pointer">
 							<span>Product</span>
 							<UIcon name="i-heroicons-chevron-down" class="mt-.5" />
@@ -122,7 +218,7 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="flex gap-6">
+				<div class="flex gap-6 max-lg:hidden">
 					<button
 						class="py-2 px-3 border text-sm font-semibold rounded-md border-primary-500 text-primary-500">
 						Log in
@@ -137,7 +233,7 @@
 			<div class="flex justify-center mt-40">
 				<div
 					id="typing-text"
-					class="text-7xl text-gray-50 font-semibold text-nowrap"
+					class="text-7xl text-gray-50 font-semibold text-nowrap z-[-1]"
 					:class="{ fadeOut: fadingOut, fadeIn: fadingIn }">
 					<span>
 						{{ currentText }}
@@ -181,7 +277,7 @@
 </template>
 
 <style scoped>
-	@keyframes gradientBG {
+	@keyframes gradientBGd {
 		0% {
 			background-position: 0 50%;
 		}
