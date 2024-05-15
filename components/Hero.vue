@@ -1,6 +1,20 @@
 <script setup>
 	import vid from '@/assets/make-vid.webm';
 
+	const isScrolled = ref(false);
+
+	const handleScroll = () => {
+		isScrolled.value = window.scrollY > 0;
+	};
+
+	onMounted(() => {
+		window.addEventListener('scroll', handleScroll);
+	});
+
+	onUnmounted(() => {
+		window.removeEventListener('scroll', handleScroll);
+	});
+
 	const texts = ref([
 		'Bring ideas to life',
 		'Connect apps',
@@ -44,11 +58,13 @@
 
 	onMounted(() => {
 		type();
+		window.addEventListener('scroll', handleScroll);
 	});
 
 	// Clear typingTimeout on component unmount
 	onUnmounted(() => {
 		clearTimeout(typingTimeout);
+		window.removeEventListener('scroll', handleScroll);
 	});
 </script>
 
@@ -57,9 +73,33 @@
 		<div class="hero-bg"></div>
 
 		<section class="relative z-[1]">
-			<header class="flex justify-between items-center text-gray-50 h-20 px-6">
+			<CommentBox class="absolute left-32 top-20" :inverse="true"
+				>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+				sunt?</CommentBox
+			>
+			<CommentBox class="absolute left-44 top-[15rem]" :inverse="true">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci omnis
+				amet expedita?</CommentBox
+			>
+
+			<CommentBox class="absolute right-44 top-40"
+				>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum quia
+				vitae delectus?</CommentBox
+			>
+			<CommentBox class="absolute right-64 top-72"
+				>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
+				perspiciatis aliquam voluptatibus omnis possimus vitae similique, nam
+				placeat mollitia laudantium?</CommentBox
+			>
+
+			<header
+				class="fixed w-full top-0 flex justify-between items-center text-gray-50 h-20 px-6"
+				:class="{
+					'bg-white text-gray-700 transition-all duration-500 ease-linear':
+						isScrolled,
+				}">
 				<div>Logo</div>
-				<nav>
+				<nav class="ml-32">
 					<ul class="flex gap-12">
 						<li class="flex items-center gap-1 text-sm cursor-pointer">
 							<span>Product</span>
@@ -94,7 +134,7 @@
 				</div>
 			</header>
 
-			<div class="flex justify-center mt-20">
+			<div class="flex justify-center mt-40">
 				<div
 					id="typing-text"
 					class="text-7xl text-gray-50 font-semibold text-nowrap"
@@ -141,7 +181,7 @@
 </template>
 
 <style scoped>
-	@keyframes gradientBGd {
+	@keyframes gradientBG {
 		0% {
 			background-position: 0 50%;
 		}
