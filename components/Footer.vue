@@ -1,4 +1,6 @@
 <script setup>
+	import glassdoor from '@/assets/verticalStarRating.png';
+
 	const items = ref([
 		{
 			id: 1,
@@ -61,7 +63,7 @@
 				Trusted by 500,000+ Makers
 			</h2>
 
-			<div class="relative max-w-[60%]">
+			<div class="relative max-w-[65%]">
 				<div
 					class="grid grid-cols-[16rem_16rem_16rem_16rem_16rem] pb-8 px-16 mt-12 gap-x-12 overflow-x-hidden scroll-smooth"
 					ref="scrollContainer">
@@ -104,7 +106,7 @@
 				</button>
 			</div>
 
-			<div class="max-w-[60%] grid grid-cols-6 gap-x-8 mt-28">
+			<div class="max-w-[65%] grid grid-cols-6 justify-items-end gap-x-8 mt-28">
 				<div class="col-span-2">
 					<p class="text-gray-50 font-light">Subscribe to news updates*</p>
 					<input
@@ -125,16 +127,79 @@
 					</button>
 				</div>
 				<div class="">
-					<p>Subscribe to news updates*</p>
+					<p class="text-[.8rem] capitalize text-gray-300 font-light">make</p>
+					<ul class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
+						<li>Product</li>
+						<li>Apps</li>
+						<li>Pricing</li>
+						<li>Get demo</li>
+						<li>Enterprise</li>
+						<li>Status</li>
+					</ul>
 				</div>
 				<div class="">
-					<p>Subscribe to news updates*</p>
+					<p class="text-[.8rem] capitalize text-gray-300 font-light">
+						Solutions
+					</p>
+					<ul class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
+						<li>Use cases</li>
+						<li>Templates</li>
+						<li>Partner directory</li>
+						<li>API documentation</li>
+						<li>Idea exchange</li>
+					</ul>
 				</div>
 				<div class="">
-					<p>Subscribe to news updates*</p>
+					<p class="text-[.8rem] capitalize text-gray-300 font-light">
+						Resources
+					</p>
+					<ul class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
+						<li>Academy</li>
+						<li>Community</li>
+						<li>Documentation</li>
+						<li>API documentation</li>
+						<li>Blog</li>
+						<li>Webinars</li>
+						<li>Affiliate</li>
+						<li>Partners</li>
+						<li>Security</li>
+						<li>On-prem agents</li>
+					</ul>
 				</div>
 				<div class="">
-					<p>Subscribe to news updates*</p>
+					<p class="text-[.8rem] capitalize text-gray-300 font-light">
+						Company
+					</p>
+					<ul class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
+						<li>About</li>
+						<li>Careers</li>
+						<li>Contact us</li>
+						<li>Press</li>
+						<li>Terms & conditions</li>
+						<li>Privacy notice</li>
+						<li>Cookie notice</li>
+						<li>Disclaimer</li>
+						<li>Security</li>
+						<li>Bug Bounty</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="w-[65%] flex justify-between items-center mt-20">
+				<p class="font-light text-gray-50">
+					© 2024 Celonis, Inc. All rights reserved.
+				</p>
+
+				<div class="flex items-center gap-8">
+					<UIcon name="i-fa6-brands-facebook" class="text-2xl text-gray-50" />
+					<UIcon name="i-fa6-brands-instagram" class="text-2xl text-gray-50" />
+					<UIcon name="i-fa6-brands-twitter" class="text-2xl text-gray-50" />
+					<UIcon name="i-fa6-brands-linkedin" class="text-2xl text-gray-50" />
+					<UIcon name="i-fa6-brands-youtube" class="text-2xl text-gray-50" />
+				</div>
+
+				<div class="w-52">
+					<img :src="glassdoor" alt="glassdoor-logo-with-rating" />
 				</div>
 			</div>
 		</div>
