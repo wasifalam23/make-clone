@@ -125,75 +125,11 @@
 				<button
 					@click="isMenuOpen = !isMenuOpen"
 					class="bg-primary-800 text-gray-50 w-14 h-14 rounded-full items-center justify-center hidden max-lg:flex">
-					<UIcon name="i-heroicons-squares-plus-solid" class="text-xl" />
+					<UIcon v-if="isMenuOpen" name="i-heroicons-x-mark" class="text-3xl" />
+					<UIcon v-else name="i-heroicons-squares-plus-solid" class="text-xl" />
 				</button>
 
-				<nav
-					v-show="isMenuOpen"
-					class="fixed top-20 hidden max-lg:block inset-0 w-full h-full bg-white overflow-y-scroll text-gray-800 pt-14 px-6 pb-14">
-					<div class="">
-						<ul class="flex flex-col gap-6">
-							<li class="flex flex-col gap-4 border-b pb-6 border-b-gray-400">
-								<div class="font-thin uppercase text-sm">Product</div>
-								<ul class="flex flex-col gap-2">
-									<li class="flex items-center gap-5">
-										<UIcon name="i-heroicons-bolt" class="text-2xl" />
-										<span class="text-lg font-light">Platform</span>
-									</li>
-									<li class="flex items-center gap-5">
-										<UIcon name="i-heroicons-plus-circle" class="text-2xl" />
-										<span class="text-lg font-light">Apps & services</span>
-									</li>
-									<li class="flex items-center gap-5">
-										<UIcon
-											name="i-heroicons-globe-europe-africa"
-											class="text-2xl" />
-										<span class="text-lg font-light">EnterPrise</span>
-									</li>
-								</ul>
-							</li>
-
-							<li class="flex flex-col gap-4 border-b pb-6 border-b-gray-400">
-								<div class="font-thin uppercase text-sm">solutions</div>
-								<ul class="flex flex-col gap-2">
-									<li class="flex items-center gap-5">
-										<UIcon name="i-heroicons-bolt" class="text-2xl" />
-										<span class="text-lg font-light">Platform</span>
-									</li>
-									<li class="flex items-center gap-5">
-										<UIcon name="i-heroicons-plus-circle" class="text-2xl" />
-										<span class="text-lg font-light">Apps & services</span>
-									</li>
-									<li class="flex items-center gap-5">
-										<UIcon
-											name="i-heroicons-globe-europe-africa"
-											class="text-2xl" />
-										<span class="text-lg font-light">EnterPrise</span>
-									</li>
-								</ul>
-							</li>
-							<li class="flex flex-col gap-4 border-b pb-6 border-b-gray-400">
-								<div class="font-thin uppercase text-sm">solutions</div>
-								<ul class="flex flex-col gap-2">
-									<li class="flex items-center gap-5">
-										<UIcon name="i-heroicons-bolt" class="text-2xl" />
-										<span class="text-lg font-light">Platform</span>
-									</li>
-									<li class="flex items-center gap-5">
-										<UIcon name="i-heroicons-plus-circle" class="text-2xl" />
-										<span class="text-lg font-light">Apps & services</span>
-									</li>
-									<li class="flex items-center gap-5">
-										<UIcon
-											name="i-heroicons-globe-europe-africa"
-											class="text-2xl" />
-										<span class="text-lg font-light">EnterPrise</span>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</nav>
+				<MobileNavMenu v-show="isMenuOpen" />
 
 				<nav class="ml-32 max-lg:hidden">
 					<ul class="flex gap-12 max-xl:gap-8">
