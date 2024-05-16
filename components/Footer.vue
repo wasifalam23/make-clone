@@ -58,12 +58,12 @@
 
 <template>
 	<section class="relative pt-24 pb-24">
-		<div class="flex flex-col items-center">
-			<h2 class="text-gray-50 text-5xl font-bold">
+		<div class="">
+			<h2 class="text-gray-50 text-5xl text-center font-bold">
 				Trusted by 500,000+ Makers
 			</h2>
 
-			<div class="relative max-w-[65%]">
+			<div class="relative max-w-[65%] mx-auto max-2xl:max-w-[85%]">
 				<div
 					class="grid grid-cols-[16rem_16rem_16rem_16rem_16rem] pb-8 px-16 mt-12 gap-x-12 overflow-x-hidden scroll-smooth"
 					ref="scrollContainer">
@@ -106,8 +106,9 @@
 				</button>
 			</div>
 
-			<div class="max-w-[65%] grid grid-cols-6 justify-items-end gap-x-8 mt-28">
-				<div class="col-span-2">
+			<div
+				class="max-w-[65%] mx-auto px-12 max-2xl:max-w-[80%] max-xl:max-w-full flex max-xl:flex-col gap-32 max-xl:gap-20 justify-items-end mt-28">
+				<div class="w-[30%] max-xl:w-[50%]">
 					<p class="text-gray-50 font-light">Subscribe to news updates*</p>
 					<input
 						type="text"
@@ -126,66 +127,74 @@
 						<UIcon name="i-heroicons-arrow-long-right" class="text-xs" />
 					</button>
 				</div>
-				<div class="">
-					<p class="text-[.8rem] capitalize text-gray-300 font-light">make</p>
-					<ul class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
-						<li>Product</li>
-						<li>Apps</li>
-						<li>Pricing</li>
-						<li>Get demo</li>
-						<li>Enterprise</li>
-						<li>Status</li>
-					</ul>
-				</div>
-				<div class="">
-					<p class="text-[.8rem] capitalize text-gray-300 font-light">
-						Solutions
-					</p>
-					<ul class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
-						<li>Use cases</li>
-						<li>Templates</li>
-						<li>Partner directory</li>
-						<li>API documentation</li>
-						<li>Idea exchange</li>
-					</ul>
-				</div>
-				<div class="">
-					<p class="text-[.8rem] capitalize text-gray-300 font-light">
-						Resources
-					</p>
-					<ul class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
-						<li>Academy</li>
-						<li>Community</li>
-						<li>Documentation</li>
-						<li>API documentation</li>
-						<li>Blog</li>
-						<li>Webinars</li>
-						<li>Affiliate</li>
-						<li>Partners</li>
-						<li>Security</li>
-						<li>On-prem agents</li>
-					</ul>
-				</div>
-				<div class="">
-					<p class="text-[.8rem] capitalize text-gray-300 font-light">
-						Company
-					</p>
-					<ul class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
-						<li>About</li>
-						<li>Careers</li>
-						<li>Contact us</li>
-						<li>Press</li>
-						<li>Terms & conditions</li>
-						<li>Privacy notice</li>
-						<li>Cookie notice</li>
-						<li>Disclaimer</li>
-						<li>Security</li>
-						<li>Bug Bounty</li>
-					</ul>
+
+				<div class="grid grid-cols-4 gap-x-8 w-[70%] max-xl:w-full">
+					<div class="">
+						<p class="text-[.8rem] capitalize text-gray-300 font-light">make</p>
+						<ul
+							class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
+							<li>Product</li>
+							<li>Apps</li>
+							<li>Pricing</li>
+							<li>Get demo</li>
+							<li>Enterprise</li>
+							<li>Status</li>
+						</ul>
+					</div>
+					<div class="">
+						<p class="text-[.8rem] capitalize text-gray-300 font-light">
+							Solutions
+						</p>
+						<ul
+							class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
+							<li>Use cases</li>
+							<li>Templates</li>
+							<li>Partner directory</li>
+							<li>API documentation</li>
+							<li>Idea exchange</li>
+						</ul>
+					</div>
+					<div class="">
+						<p class="text-[.8rem] capitalize text-gray-300 font-light">
+							Resources
+						</p>
+						<ul
+							class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
+							<li>Academy</li>
+							<li>Community</li>
+							<li>Documentation</li>
+							<li>API documentation</li>
+							<li>Blog</li>
+							<li>Webinars</li>
+							<li>Affiliate</li>
+							<li>Partners</li>
+							<li>Security</li>
+							<li>On-prem agents</li>
+						</ul>
+					</div>
+					<div class="">
+						<p class="text-[.8rem] capitalize text-gray-300 font-light">
+							Company
+						</p>
+						<ul
+							class="text-gray-200 text-sm font-light mt-4 flex flex-col gap-3">
+							<li>About</li>
+							<li>Careers</li>
+							<li>Contact us</li>
+							<li>Press</li>
+							<li>Terms & conditions</li>
+							<li>Privacy notice</li>
+							<li>Cookie notice</li>
+							<li>Disclaimer</li>
+							<li>Security</li>
+							<li>Bug Bounty</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
-			<div class="w-[65%] flex justify-between items-center mt-20">
+			<div
+				class="w-[65%] mx-auto max-2xl:w-[80%] max-xl:w-full px-12 flex flex-wrap gap-8 justify-between items-center mt-20">
 				<p class="font-light text-gray-50">
 					© 2024 Celonis, Inc. All rights reserved.
 				</p>

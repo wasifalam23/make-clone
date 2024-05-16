@@ -47,12 +47,12 @@
 	<section
 		ref="scrollSection"
 		:class="{ 'scroll-up-animation': showScrollUpAnimation }"
-		class="scroll-up-section relative bg-primary-800 flex flex-col items-center pt-24 pb-16 transition-opacity duration-500">
-		<div class="w-[70%] mx-auto px-16">
-			<h2 class="text-gray-50 font-semibold text-5xl">
+		class="scroll-up-section relative bg-primary-800 flex flex-col items-center pt-24 pb-16 transition-opacity duration-500 max-md:pt-20">
+		<div class="w-[70%] px-16 max-2xl:w-[85%] max-xl:w-[90%] max-xl:px-0">
+			<h2 class="text-gray-50 font-semibold text-5xl max-md:text-3xl">
 				One platform. Unlimited possibilities for all.
 			</h2>
-			<div class="max-w-[50rem] mt-4">
+			<div class="max-w-[50rem] mt-6">
 				<p class="text-lg text-gray-300 font-light">
 					Boost productivity across every area or team. Anyone can use Make to
 					design powerful workflows without relying on developer resources.
@@ -60,7 +60,7 @@
 			</div>
 		</div>
 
-		<div class="relative max-w-[70%]">
+		<div class="relative max-w-[70%] max-2xl:max-w-[85%] max-xl:max-w-[90%]">
 			<div
 				class="grid grid-cols-[18rem_18rem_18rem_18rem_18rem] pb-8 px-16 mt-12 gap-x-6 overflow-x-scroll"
 				ref="scrollContainer">

@@ -15,12 +15,14 @@
 		<Hero />
 
 		<section class="relative bg-white">
-			<div class="flex flex-col items-center justify-center pt-16 pb-20 gap-8">
-				<p class="text-2xl font-light">
+			<div
+				class="flex flex-col items-center justify-center pt-16 pb-20 px-8 gap-8">
+				<p class="text-2xl font-light max-md:text-xl text-center">
 					Trusted by thousands of fast-scaling organizations around the globe
 				</p>
 
-				<div class="flex items-center gap-14">
+				<div
+					class="flex items-center gap-14 flex-wrap content-center justify-center">
 					<img :src="personio" alt="" class="w-16" />
 					<img :src="spotify" alt="" class="w-20" />
 					<img :src="finn" alt="" class="w-14" />
@@ -32,13 +34,14 @@
 		</section>
 
 		<section
-			class="relative bg-primary-100 flex flex-col items-center pt-16 pb-20">
-			<h2 class="text-gray-800 font-semibold text-5xl">
+			class="relative bg-primary-100 flex flex-col items-center pt-16 pb-20 px-8">
+			<h2
+				class="text-gray-800 font-semibold text-5xl max-md:text-3xl text-center">
 				More than no-code workflow automation
 			</h2>
 
-			<div class="max-w-4xl text-center mt-8">
-				<p class="text-lg font-light">
+			<div class="max-w-4xl text-center mt-8 max-md:mt-6">
+				<p class="text-lg font-light max-md:text-base">
 					Traditional no-code iPaaS platforms are linear and non-intuitive. Make
 					allows you to visually create, build, and automate without limits.
 				</p>
@@ -48,27 +51,28 @@
 				<img class="w-[46rem]" :src="play" alt="" />
 			</div>
 
-			<div class="flex items-center gap-8 font-light mt-6">
-				<span>Replaces:</span>
-				<div class="flex gap-2">
-					<div class="px-3 py-1.5 bg-white rounded-full">Zapier</div>
-					<div class="px-3 py-1.5 bg-white rounded-full">Warkato</div>
-					<div class="px-3 py-1.5 bg-white rounded-full">Tray.io</div>
-				</div>
+			<div
+				class="flex items-center gap-2 font-light mt-6 max-md:justify-between max-md:w-full">
+				<span class="mr-4">Replaces:</span>
+
+				<div class="px-3 py-1.5 bg-white rounded-full">Zapier</div>
+				<div class="px-3 py-1.5 bg-white rounded-full">Warkato</div>
+				<div class="px-3 py-1.5 bg-white rounded-full">Tray.io</div>
 			</div>
 		</section>
 
 		<Features />
 
-		<section class="relative bg-primary-100 pt-16 pb-20">
+		<section
+			class="relative bg-primary-100 pt-16 pb-20 px-8 max-md:pt-20 max-md:pb-14">
 			<div
-				class="grid grid-cols-[55fr_45fr] gap-x-14 items-center max-w-[75rem] mx-auto">
-				<div>
+				class="grid grid-cols-[55fr_45fr] max-md:grid-cols-1 gap-x-14 max-md:gap-y-10 items-center max-w-[75rem] mx-auto">
+				<div class="max-md:order-last">
 					<img :src="webinar" alt="webinar" />
 				</div>
 
-				<div class="flex flex-col gap-6">
-					<h2 class="text-5xl font-bold">
+				<div class="flex flex-col gap-6 max-md:order-first">
+					<h2 class="text-5xl font-bold max-md:text-3xl">
 						Automate your work. Build something new.
 					</h2>
 					<p class="text-lg font-light pr-8">
@@ -85,11 +89,13 @@
 			</div>
 		</section>
 
-		<section class="relative bg-white pt-16 pb-24">
+		<section class="relative bg-white pt-16 pb-20 px-8 max-md:pb-14">
 			<div
-				class="grid grid-cols-[45fr_55fr] gap-x-14 items-center max-w-[75rem] mx-auto">
+				class="grid grid-cols-[45fr_55fr] max-md:grid-cols-1 gap-x-14 max-md:gap-y-10 items-center max-w-[75rem] mx-auto">
 				<div class="flex flex-col gap-6">
-					<h2 class="text-5xl font-bold">Start with a template</h2>
+					<h2 class="text-5xl font-bold max-md:text-3xl">
+						Start with a template
+					</h2>
 					<p class="text-lg font-light pr-8 w-[95%]">
 						Get inspired by thousands of free workflow automation templates.
 						Customize them to match your ideal workflows.

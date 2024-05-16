@@ -93,20 +93,22 @@
 		<div class="hero-bg"></div>
 
 		<section class="relative z-[10]">
-			<CommentBox class="absolute left-32 top-20" :inverse="true"
+			<CommentBox class="absolute left-32 top-20 max-2xl:hidden" :inverse="true"
 				>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
 				sunt?</CommentBox
 			>
-			<CommentBox class="absolute left-44 top-[15rem]" :inverse="true">
+			<CommentBox
+				class="absolute left-44 top-[15rem] max-2xl:hidden"
+				:inverse="true">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci omnis
 				amet expedita?</CommentBox
 			>
 
-			<CommentBox class="absolute right-44 top-40"
+			<CommentBox class="absolute right-44 top-40 max-2xl:hidden"
 				>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum quia
 				vitae delectus?</CommentBox
 			>
-			<CommentBox class="absolute right-64 top-72"
+			<CommentBox class="absolute right-64 top-72 max-2xl:hidden"
 				>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum
 				perspiciatis aliquam voluptatibus omnis possimus vitae similique, nam
 				placeat mollitia laudantium?</CommentBox
@@ -169,7 +171,7 @@
 			<div class="flex justify-center mt-40">
 				<div
 					id="typing-text"
-					class="text-7xl text-gray-50 font-semibold text-nowrap z-[-1]"
+					class="text-7xl max-md:text-4xl text-gray-50 font-semibold text-nowrap z-[-1]"
 					:class="{ fadeOut: fadingOut, fadeIn: fadingIn }">
 					<span>
 						{{ currentText }}
@@ -178,9 +180,12 @@
 				</div>
 			</div>
 			<div class="flex items-center flex-col">
-				<h1 class="text-primary-600 text-7xl font-semibold mt-4">#withMake</h1>
-				<div class="max-w-[44rem] text-center mt-8">
-					<p class="text-gray-50 text-lg font-light">
+				<h1
+					class="text-primary-600 text-7xl max-md:text-4xl font-semibold mt-4 max-md:mt-2">
+					#withMake
+				</h1>
+				<div class="max-w-[44rem] text-center mt-8 max-md:px-4">
+					<p class="text-gray-50 text-lg font-light max-md:text-base">
 						From tasks and workflows to apps and systems, build and automate
 						anything in one powerful visual platform.
 					</p>
@@ -191,7 +196,8 @@
 					Get started free
 				</button>
 
-				<div class="flex items-center gap-6 mt-6 text-gray-50">
+				<div
+					class="flex max-md:flex-col max-md:gap-2 items-center gap-6 mt-6 text-gray-50">
 					<div class="flex items-center gap-2">
 						<UIcon name="i-heroicons-check" class="mt-.5" />
 						<p>No credit card required</p>
