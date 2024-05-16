@@ -59,13 +59,15 @@
 <template>
 	<section class="relative pt-24 pb-24">
 		<div class="">
-			<h2 class="text-gray-50 text-5xl text-center font-bold">
+			<h2
+				class="text-gray-50 text-5xl text-center font-bold max-md:text-3xl px-6">
 				Trusted by 500,000+ Makers
 			</h2>
 
-			<div class="relative max-w-[65%] mx-auto max-2xl:max-w-[85%]">
+			<div
+				class="relative max-w-[65%] mx-auto max-2xl:max-w-[85%] max-sm:max-w-[75%] max-[420px]:max-w-[90%]">
 				<div
-					class="grid grid-cols-[16rem_16rem_16rem_16rem_16rem] pb-8 px-16 mt-12 gap-x-12 overflow-x-hidden scroll-smooth"
+					class="grid grid-cols-[16rem_16rem_16rem_16rem_16rem] pb-8 px-16 mt-12 gap-x-12 overflow-x-hidden scroll-smooth touch-pan-y"
 					ref="scrollContainer">
 					<div
 						class="h-40 flex flex-col"
@@ -85,18 +87,23 @@
 
 				<button
 					@click="scrollRight"
-					class="absolute -right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center">
-					<UIcon name="i-heroicons-chevron-right" class="bg-gray-50 text-xl" />
+					class="absolute -right-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center max-[420px]:bg-white max-[420px]:top-56 max-[420px]:right-20">
+					<UIcon
+						name="i-heroicons-chevron-right"
+						class="bg-gray-50 max-[420px]:bg-gray-600 text-xl" />
 				</button>
 				<button
 					@click="scrollLeft"
-					class="absolute -left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center">
-					<UIcon name="i-heroicons-chevron-left" class="bg-gray-50 text-xl" />
+					class="absolute -left-12 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center max-[420px]:bg-white max-[420px]:top-56 max-[420px]:left-20">
+					<UIcon
+						name="i-heroicons-chevron-left"
+						class="bg-gray-50 max-[420px]:bg-gray-600 text-xl" />
 				</button>
 			</div>
 
-			<div class="mt-16 flex flex-col items-center gap-8">
-				<h2 class="text-gray-50 text-5xl font-bold">
+			<div class="mt-16 flex flex-col items-center gap-8 max-[420px]:mt-24">
+				<h2
+					class="text-gray-50 text-5xl font-bold max-md:text-3xl text-center px-6">
 					Work the way you imagine
 				</h2>
 
@@ -108,7 +115,7 @@
 
 			<div
 				class="max-w-[65%] mx-auto px-12 max-2xl:max-w-[80%] max-xl:max-w-full flex max-xl:flex-col gap-32 max-xl:gap-20 justify-items-end mt-28">
-				<div class="w-[30%] max-xl:w-[50%]">
+				<div class="w-[30%] max-xl:w-[50%] max-sm:w-full">
 					<p class="text-gray-50 font-light">Subscribe to news updates*</p>
 					<input
 						type="text"
@@ -128,7 +135,8 @@
 					</button>
 				</div>
 
-				<div class="grid grid-cols-4 gap-x-8 w-[70%] max-xl:w-full">
+				<div
+					class="grid grid-cols-4 max-sm:grid-cols-2 max-[420px]:grid-cols-1 max-sm:gap-y-16 gap-x-8 w-[70%] max-xl:w-full">
 					<div class="">
 						<p class="text-[.8rem] capitalize text-gray-300 font-light">make</p>
 						<ul
@@ -194,7 +202,7 @@
 			</div>
 
 			<div
-				class="w-[65%] mx-auto max-2xl:w-[80%] max-xl:w-full px-12 flex flex-wrap gap-8 justify-between items-center mt-20">
+				class="w-[65%] mx-auto max-2xl:w-[80%] max-xl:w-full px-12 flex flex-wrap gap-8 justify-between items-center mt-20 max-sm:flex-col">
 				<p class="font-light text-gray-50">
 					© 2024 Celonis, Inc. All rights reserved.
 				</p>

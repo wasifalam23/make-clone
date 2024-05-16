@@ -108,7 +108,7 @@
 
 			<button
 				@click="scrollRight"
-				class="absolute -right-5 top-1/2 -translate-y-1/2 w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center">
+				class="absolute -right-5 top-1/2 -translate-y-1/2 w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center max-[420px]:hidden">
 				<UIcon name="i-heroicons-chevron-right" class="bg-gray-800 text-xl" />
 			</button>
 		</div>

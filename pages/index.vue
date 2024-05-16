@@ -52,7 +52,7 @@
 			</div>
 
 			<div
-				class="flex items-center gap-2 font-light mt-6 max-md:justify-between max-md:w-full">
+				class="flex flex-wrap items-center gap-2 font-light mt-6 max-md:justify-between max-md:w-full">
 				<span class="mr-4">Replaces:</span>
 
 				<div class="px-3 py-1.5 bg-white rounded-full">Zapier</div>
