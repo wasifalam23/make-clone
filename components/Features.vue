@@ -45,8 +45,6 @@
 
 <template>
 	<section
-		ref="scrollSection"
-		:class="{ 'scroll-up-animation': showScrollUpAnimation }"
 		class="scroll-up-section relative bg-primary-800 flex flex-col items-center pt-24 pb-16 transition-opacity duration-500 max-md:pt-20">
 		<div class="w-[70%] px-16 max-2xl:w-[85%] max-xl:w-[90%] max-xl:px-0">
 			<h2 class="text-gray-50 font-semibold text-5xl max-md:text-3xl">

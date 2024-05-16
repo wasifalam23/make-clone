@@ -133,29 +133,7 @@
 
 				<MobileNavMenu v-show="isMenuOpen" />
 
-				<nav class="ml-32 max-lg:hidden">
-					<ul class="flex gap-12 max-xl:gap-8">
-						<li class="flex items-center gap-1 text-sm cursor-pointer">
-							<span>Product</span>
-							<UIcon name="i-heroicons-chevron-down" class="mt-.5" />
-						</li>
-						<li class="flex items-center gap-1 text-sm cursor-pointer">
-							<span>Solutions</span>
-							<UIcon name="i-heroicons-chevron-down" class="mt-.5" />
-						</li>
-						<li class="flex items-center gap-1 text-sm cursor-pointer">
-							<span>Pricing</span>
-						</li>
-						<li class="flex items-center gap-1 text-sm cursor-pointer">
-							<span>Resources</span>
-							<UIcon name="i-heroicons-chevron-down" class="mt-.5" />
-						</li>
-						<li class="flex items-center gap-1 text-sm cursor-pointer">
-							<span>Partners</span>
-							<UIcon name="i-heroicons-chevron-down" class="mt-.5" />
-						</li>
-					</ul>
-				</nav>
+				<Navigation />
 				<div class="flex gap-6 max-lg:hidden">
 					<button
 						class="py-2 px-3 border text-sm font-semibold rounded-md border-primary-500 text-primary-500">
@@ -219,7 +197,7 @@
 </template>
 
 <style scoped>
-	@keyframes gradientBGd {
+	@keyframes gradientBG {
 		0% {
 			background-position: 0 50%;
 		}
