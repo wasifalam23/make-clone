@@ -146,7 +146,7 @@
 				</div>
 			</header>
 
-			<div class="flex justify-center mt-40">
+			<div class="flex justify-center mt-40 max-md:mt-32">
 				<div
 					id="typing-text"
 					class="text-7xl max-md:text-4xl text-gray-50 font-semibold text-nowrap z-[-1]"
